@@ -91,6 +91,8 @@ $slider-color: rgba(218, 218, 218, 1);
 
                 .play {
                     background-image: url(./assets/playBtn.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
                     width: 38px;
                     height: 38px;
                 }
