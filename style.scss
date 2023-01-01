@@ -1,136 +1,143 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Inter";
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
 }
 
-$background-color: rgba(255, 254, 248, 1);
-$slider-color: rgba(218, 218, 218, 1);
+$color-body: #5e5d5d;
+$color-main: #FFFEF8;
+$color-title: #000000;
+$color-text: #454545;
+$color-primary-line: #DADADA;
+$color-line: #49816c;
 
-.main-wrapper {
+body {
+    background-color: $color-body;
+}
+
+.player {
     width: 540px;
     height: 169px;
-    background-color: $background-color;
-    border-radius: 14.7px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10%;
+    background: $color-main;
+    border-radius: 14.7px;
     display: flex;
 
-    .image {
-        img {
-            width: 169px;
-            height: 169px;
-            border-radius: 15px 0 0 15px;
-        }
-    }
-
-    .icon {
-        background-image: url(./assets/Vector.svg);
-        width: 21px;
-        height: 21px;
-        position: relative;
-        left: 285px;
-        top: -43px;
+    .img {
+        background-image: url(./png/unholy.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 169px;
+        height: 169px;
+        cursor: pointer;
     }
 
     .wrapper {
-        margin-left: 32px;
-        margin-top: 17px;
+        margin-left: 15px;
 
-        h1 {
-            font-weight: 700;
-            font-size: 18px;
+        .title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 10px;
+
+            #title {
+                font-weight: 700;
+                font-size: 18px;
+                color: $color-title;
+            }
+
+            .icon {
+                background-image: url(./assets/Vector.svg);
+                background-repeat: no-repeat;
+                width: 21px;
+                height: 21px;
+            }
         }
 
-        h2 {
+        #singer {
             font-weight: 400;
             font-size: 14px;
+            color: $color-text;
             margin-top: 5px;
+            margin-left: 10px;
         }
 
-
         .line-time {
+            margin-top: 20px;
+            margin-left: 10px;
             display: flex;
 
-            .line-duration {
+            .line-flex {
                 width: 257px;
                 height: 3px;
-                background-color: $slider-color;
-                // border: 0.5px solid $slider-color;
-                margin-top: 17px;
+                background: $color-primary-line;
+                margin-top: 5px;
+                cursor: pointer;
+            }
 
-                .line {
-                background-color: $slider-color;
-                    
-                    height: 3px;
-                    width: 0;
-
-                }
+            .line {
+                width: 0;
+                height: 3px;
+                background: $color-line;
             }
 
             .time {
                 font-weight: 400;
                 font-size: 12px;
-                margin-top: 11px;
-                margin-left: 16px;
+                color: $color-text;
+                margin-left: 15px;
             }
         }
 
         .buttons {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
+            margin-top: 20px;
+            margin-left: 10px;
 
-
-            .reverse {
+            .repeat-btn {
                 background-image: url(./assets/repeatBtn.svg);
-                background-size: contain;
-                height: 24px;
+                background-repeat: no-repeat;
                 width: 24px;
+                height: 24px;
+                margin-top: 5px;
+            }
+
+            .back {
+                background-image: url(./assets/prevBtn.svg);
+                background-repeat: no-repeat;
+                width: 35.5px;
+                height: 34.3px;
                 cursor: pointer;
             }
 
-            .wrapper-play {
-                display: flex;
-                width: 149px;
-                justify-content: space-around;
-                align-items: center;
-
-                .prev {
-                    background-image: url(./assets/prevBtn.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    width: 35.5px;
-                    height: 34.3px;
-                    cursor: pointer;
-                }
-
-                .play {
-                    background-image: url(./assets/playBtn.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    width: 38px;
-                    height: 38px;
-                    cursor: pointer;
-                }
-
-                .next {
-                    background-image: url(./assets/nextBtn.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    width: 35.5px;
-                    height: 34.3px;
-                    cursor: pointer;
-                }
+            .play {
+                background-image: url(./assets/playBtn.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 38px;
+                height: 25px;
+                cursor: pointer;
             }
 
-            .favourite {
+            .next {
+                background-image: url(./assets/nextBtn.svg);
+                background-repeat: no-repeat;
+                width: 35.5px;
+                height: 34.3px;
+                cursor: pointer;
+            }
+
+            .like {
                 background-image: url(./assets/favBtn.svg);
-                background-size: contain;
-                height: 24px;
+                background-repeat: no-repeat;
                 width: 24px;
-                cursor: pointer;
+                height: 24px;
+                margin-top: 5px;
             }
         }
     }

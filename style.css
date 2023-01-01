@@ -2,106 +2,132 @@
   margin: 0;
   padding: 0;
   font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
 }
 
-.main-wrapper {
+body {
+  background-color: #5e5d5d;
+}
+
+.player {
   width: 540px;
   height: 169px;
-  background-color: rgb(255, 254, 248);
-  border-radius: 14.7px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 10%;
+  background: #FFFEF8;
+  border-radius: 14.7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.main-wrapper .img {
-  background-image: url(./assets/thumbnail-img.png);
+.player .img {
+  background-image: url(./png/unholy.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 169px;
   height: 169px;
+  cursor: pointer;
 }
-.main-wrapper .icon {
-  background-image: url(./assets/Vector.svg);
-  width: 21px;
-  height: 21px;
-  position: relative;
-  left: 285px;
-  top: -43px;
+.player .wrapper {
+  margin-left: 15px;
 }
-.main-wrapper .wrapper {
-  margin-left: 32px;
-  margin-top: 17px;
-}
-.main-wrapper .wrapper h1 {
-  font-weight: 700;
-  font-size: 18px;
-}
-.main-wrapper .wrapper h2 {
-  font-weight: 400;
-  font-size: 14px;
-  margin-top: 5px;
-}
-.main-wrapper .wrapper .wrapper-time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.main-wrapper .wrapper .wrapper-time .duration {
-  width: 257px;
-  height: 3px;
-  border: 0.5px solid rgb(218, 218, 218);
-  margin-top: 17px;
-}
-.main-wrapper .wrapper .wrapper-time .time {
-  font-weight: 400;
-  font-size: 12px;
-  margin-top: 11px;
-  margin-left: 16px;
-}
-.main-wrapper .wrapper .buttons {
+.player .wrapper .title-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
-.main-wrapper .wrapper .buttons .reverse {
-  background-image: url(./assets/repeatBtn.svg);
-  height: 24px;
-  width: 24px;
+.player .wrapper .title-wrapper #title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
 }
-.main-wrapper .wrapper .buttons .wrapper-play {
+.player .wrapper .title-wrapper .icon {
+  background-image: url(./assets/Vector.svg);
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+}
+.player .wrapper #singer {
+  font-weight: 400;
+  font-size: 14px;
+  color: #454545;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.player .wrapper .line-time {
+  margin-top: 20px;
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-.main-wrapper .wrapper .buttons .wrapper-play .prev {
-  background-image: url(./assets/prevBtn.svg);
-  width: 35.5px;
-  height: 34.3px;
+.player .wrapper .line-time .line-flex {
+  width: 257px;
+  height: 3px;
+  background: #DADADA;
+  margin-top: 5px;
+  cursor: pointer;
 }
-.main-wrapper .wrapper .buttons .wrapper-play .play {
-  background-image: url(./assets/playBtn.svg);
-  width: 38px;
-  height: 38px;
+.player .wrapper .line-time .line {
+  width: 0;
+  height: 3px;
+  background: #49816c;
 }
-.main-wrapper .wrapper .buttons .wrapper-play .next {
-  background-image: url(./assets/nextBtn.svg);
-  width: 35.5px;
-  height: 34.3px;
+.player .wrapper .line-time .time {
+  font-weight: 400;
+  font-size: 12px;
+  color: #454545;
+  margin-left: 15px;
 }
-.main-wrapper .wrapper .buttons .favourite {
-  background-image: url(./assets/favBtn.svg);
-  height: 24px;
+.player .wrapper .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.player .wrapper .buttons .repeat-btn {
+  background-image: url(./assets/repeatBtn.svg);
+  background-repeat: no-repeat;
   width: 24px;
+  height: 24px;
+  margin-top: 5px;
+}
+.player .wrapper .buttons .back {
+  background-image: url(./assets/prevBtn.svg);
+  background-repeat: no-repeat;
+  width: 35.5px;
+  height: 34.3px;
+  cursor: pointer;
+}
+.player .wrapper .buttons .play {
+  background-image: url(./assets/playBtn.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 38px;
+  height: 25px;
+  cursor: pointer;
+}
+.player .wrapper .buttons .next {
+  background-image: url(./assets/nextBtn.svg);
+  background-repeat: no-repeat;
+  width: 35.5px;
+  height: 34.3px;
+  cursor: pointer;
+}
+.player .wrapper .buttons .like {
+  background-image: url(./assets/favBtn.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
 }
